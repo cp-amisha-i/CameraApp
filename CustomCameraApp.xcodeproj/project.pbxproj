@@ -7,18 +7,24 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		D8AE54B62ACC2BB500771F83 /* CustomCameraAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8AE54B52ACC2BB500771F83 /* CustomCameraAppApp.swift */; };
+		D8AE54B62ACC2BB500771F83 /* CustomCameraApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8AE54B52ACC2BB500771F83 /* CustomCameraApp.swift */; };
 		D8AE54B82ACC2BB500771F83 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8AE54B72ACC2BB500771F83 /* ContentView.swift */; };
 		D8AE54BA2ACC2BB600771F83 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D8AE54B92ACC2BB600771F83 /* Assets.xcassets */; };
 		D8AE54BD2ACC2BB600771F83 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D8AE54BC2ACC2BB600771F83 /* Preview Assets.xcassets */; };
+		D8AE54C42ACC2BDF00771F83 /* CameraManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8AE54C32ACC2BDF00771F83 /* CameraManager.swift */; };
+		D8AE54C62ACC35BB00771F83 /* CameraPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8AE54C52ACC35BB00771F83 /* CameraPreview.swift */; };
+		D8AE54C82ACD496B00771F83 /* CameraViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8AE54C72ACD496B00771F83 /* CameraViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		D8AE54B22ACC2BB500771F83 /* CustomCameraApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CustomCameraApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		D8AE54B52ACC2BB500771F83 /* CustomCameraAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCameraAppApp.swift; sourceTree = "<group>"; };
+		D8AE54B52ACC2BB500771F83 /* CustomCameraApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCameraApp.swift; sourceTree = "<group>"; };
 		D8AE54B72ACC2BB500771F83 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		D8AE54B92ACC2BB600771F83 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D8AE54BC2ACC2BB600771F83 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		D8AE54C32ACC2BDF00771F83 /* CameraManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraManager.swift; sourceTree = "<group>"; };
+		D8AE54C52ACC35BB00771F83 /* CameraPreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraPreview.swift; sourceTree = "<group>"; };
+		D8AE54C72ACD496B00771F83 /* CameraViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,8 +57,11 @@
 		D8AE54B42ACC2BB500771F83 /* CustomCameraApp */ = {
 			isa = PBXGroup;
 			children = (
-				D8AE54B52ACC2BB500771F83 /* CustomCameraAppApp.swift */,
+				D8AE54B52ACC2BB500771F83 /* CustomCameraApp.swift */,
 				D8AE54B72ACC2BB500771F83 /* ContentView.swift */,
+				D8AE54C72ACD496B00771F83 /* CameraViewModel.swift */,
+				D8AE54C32ACC2BDF00771F83 /* CameraManager.swift */,
+				D8AE54C52ACC35BB00771F83 /* CameraPreview.swift */,
 				D8AE54B92ACC2BB600771F83 /* Assets.xcassets */,
 				D8AE54BB2ACC2BB600771F83 /* Preview Content */,
 			);
@@ -138,7 +147,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				D8AE54B82ACC2BB500771F83 /* ContentView.swift in Sources */,
-				D8AE54B62ACC2BB500771F83 /* CustomCameraAppApp.swift in Sources */,
+				D8AE54C62ACC35BB00771F83 /* CameraPreview.swift in Sources */,
+				D8AE54C42ACC2BDF00771F83 /* CameraManager.swift in Sources */,
+				D8AE54C82ACD496B00771F83 /* CameraViewModel.swift in Sources */,
+				D8AE54B62ACC2BB500771F83 /* CustomCameraApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -270,11 +282,14 @@
 				DEVELOPMENT_TEAM = N8562Q559W;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Camera is used for capturing photos.";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "This app need this permission to save captured photos.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -282,6 +297,9 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.project.CustomCameraApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -299,11 +317,14 @@
 				DEVELOPMENT_TEAM = N8562Q559W;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Camera is used for capturing photos.";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "This app need this permission to save captured photos.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -311,6 +332,9 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.project.CustomCameraApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
